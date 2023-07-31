@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #error{
+            color: red;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <form method="POST">
+        <h1>Enter a record</h1>
+        {{form.hidden_tag()}}
+        <p>{{form.student.label}} {{form.student()}} </p>
+        <p>{{form.mid1.label}} {{form.mid1()}} </p>
+        <p>{{form.mid2.label}} {{form.mid2()}} </p>
+        <p>{{form.mid3.label}} {{form.mid3()}} </p>
+        <p>{{form.submit}}</p>
+        {{form.display}}
+
+        <h1>Delete a record</h1>
+        <p>{{form.deletename.label}} {{form.deletename()}} </p>
+        <p>{{form.delete}}</p>
+    </form>
+    {%if error%}
+        <p id="error">{{error}}</p>
+    {%endif%}
+    
+
+</body>
+</html>
