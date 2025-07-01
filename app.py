@@ -5,6 +5,8 @@ from wtforms import StringField, SubmitField, IntegerField,FloatField
 from wtforms.validators import NumberRange
 from flask_sqlalchemy import SQLAlchemy
 
+# comment
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'oursecretkey'
 basedir = os.path.abspath(os.path.dirname(__file__))
